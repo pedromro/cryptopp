@@ -63,7 +63,7 @@
       <ErrorReporting>None</ErrorReporting>
       <WarningLevel>Level4</WarningLevel>
       <DisableSpecificWarnings>4231; 4251; 4275; 4355; 4505</DisableSpecificWarnings>
-      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <AdditionalOptions>$(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
@@ -230,6 +230,9 @@
     <ClCompile Include="nbtheory.cpp" />
     <ClCompile Include="oaep.cpp" />
     <ClCompile Include="osrng.cpp" />
+    <ClCompile Include="pem-com.cpp" />
+    <ClCompile Include="pem-rd.cpp" />
+    <ClCompile Include="pem-wr.cpp" />
     <ClCompile Include="pkcspad.cpp" />
     <ClCompile Include="primetab.cpp" />
     <ClCompile Include="pssr.cpp" />
@@ -309,6 +312,8 @@
     <ClInclude Include="oids.h" />
     <ClInclude Include="osrng.h" />
     <ClInclude Include="pch.h" />
+    <ClInclude Include="pem-com.h" />
+    <ClInclude Include="pem.h" />
     <ClInclude Include="pkcspad.h" />
     <ClInclude Include="pssr.h" />
     <ClInclude Include="pubkey.h" />

@@ -539,6 +539,9 @@
     <ClCompile Include="zlib.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="pem-wr.cpp" />
+    <ClCompile Include="pem-rd.cpp" />
+    <ClCompile Include="pem-com.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Doxyfile">
@@ -1086,6 +1089,8 @@
     <ClInclude Include="chachapoly.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="pem.h" />
+    <ClInclude Include="pem-com.h" />
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="cpuid64.asm">
