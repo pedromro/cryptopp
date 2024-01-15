@@ -1,8 +1,10 @@
 #! [0]
 TEMPLATE        = lib
 QT             -= core
+QT             -= qt
 QT             -= widgets
 QT             -= xml
+CONFIG         += console
 HEADERS         = $$files(*.h)
 SOURCES         = $$files(*.cpp)
 # \
@@ -12,14 +14,14 @@ DESTDIR         = ../dll
 #! [0]
 
 #DEFINES += MAKE_TEST_LIB
-#DEFINES += CRYPTOPP_EXPORTS
+DEFINES += CRYPTOPP_EXPORTS
 #DEFINES += CRYPTOPP_USE_AES_GENERATOR
 DEFINES += CRYPTOPP_DISABLE_ASM
 DEFINES -= __clang__
 
 # CONFIG += staticlib
 # CONFIG -= debug_and_release debug_and_release_target
-# LIBS += -lws2_32
+LIBS += -lws2_32
 
 # QMAKE_CXXFLAGS_DEBUG += /MDd
 # QMAKE_CXXFLAGS_RELEASE += /MD
