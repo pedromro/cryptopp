@@ -19,9 +19,15 @@ DEFINES += CRYPTOPP_EXPORTS
 DEFINES += CRYPTOPP_DISABLE_ASM
 DEFINES -= __clang__
 
+
+# precompile_header:!isEmpty(PRECOMPILED_HEADER) {
+# DEFINES += USING_PCH
+# }
+
+
 # CONFIG += staticlib
 # CONFIG -= debug_and_release debug_and_release_target
-LIBS += -lws2_32
+# LIBS += -lws2_32
 
 # QMAKE_CXXFLAGS_DEBUG += /MDd
 # QMAKE_CXXFLAGS_RELEASE += /MD
