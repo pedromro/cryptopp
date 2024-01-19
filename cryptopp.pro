@@ -7,17 +7,33 @@ QT             -= xml
 CONFIG         += console
 HEADERS         = $$files(*.h)
 SOURCES         = $$files(*.cpp)
-# \
-                   # $$files(*.S)
+# $$files(*.S)
+
+### Test files ###
+HEADERS        -= validate.h factory.h bench.h
+SOURCES        -= \
+                  adhoc.cpp \
+                  $$files(bench*.cpp) \
+                  datatest.cpp \
+                  dll.cpp \
+                  dlltest.cpp \
+                  fipsalgt.cpp \
+                  $$files(regtest*.cpp) \
+                  test.cpp \
+                  $$files(validat*.cpp)
+
+
 TARGET          = $$qtLibraryTarget(cryptopp)
 DESTDIR         = ../dll
 #! [0]
 
 #DEFINES += MAKE_TEST_LIB
-DEFINES += CRYPTOPP_EXPORTS
-#DEFINES += CRYPTOPP_USE_AES_GENERATOR
+#DEFINES += CRYPTOPP_EXPORTS
 DEFINES += CRYPTOPP_DISABLE_ASM
 DEFINES -= __clang__
+DEFINES += USING_QT
+DEFINES += CRYPTOPP_ENABLE_COMPLIANCE_WITH_FIPS_140_2=1
+DEFINES += _WINDLL
 
 # CONFIG += staticlib
 # CONFIG -= debug_and_release debug_and_release_target
